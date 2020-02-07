@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Container, Dropdown, Icon } from 'semantic-ui-react';
 class Nav extends Component {
 
     render() {
         return (
-            <div>
-        
-                <Menu  >
-                    <Menu.Item>
-                        {/* <img src='/logo.png' /> */}
-                    </Menu.Item>
-                    <Menu.Item>Features</Menu.Item>
-                    <Menu.Item>Testimonials</Menu.Item>
-                    <Menu.Item>Sign-in</Menu.Item>
+            <div>       
+                <Menu  fixed='top' inverted >
+                    <Container>
+                        <Menu.Item as='a' header>
+                        <Icon name="food" />
+                        Culinary Comforts
+                        </Menu.Item>    
+                        <Menu.Item as='a'>Home</Menu.Item>
+                        <Dropdown item simple text='Packages'>
+                            <Dropdown.Menu>
+                                <Dropdown.Item>List Item</Dropdown.Item>
+                                <Dropdown.Item>List Item</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    </Container>     
                 </Menu>
             
             </div>
